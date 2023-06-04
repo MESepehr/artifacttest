@@ -27,12 +27,9 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: file # Replace with the name of your artifact
-          path: ./downloaded.txt # Replace with the path where you want to save the artifact
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ARTIFACT_BRANCH: main # Replace with the branch that the pull request was merged into
-          ARTIFACT_PULL_REQUEST: ${{ github.event.pull_request.number }}
+          name: file
+          run-id: ${{ github.event.workflow_run.id }}
+          branch: beta
           
           
       - uses: actions/upload-artifact@v3
