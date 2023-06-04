@@ -23,9 +23,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
-      - name: my run id
-        run: echo ${{ github.event.workflow_run.id }}
 
-      - run: echo ${{ github.event.pull_request.head.sha }}
-      - run: echo ${{ github.event.pull_request.head.run_number }}
+      - name: Merge sha
+        run: echo ${{ github.event.pull_request.head.sha }}
+      - name: Current sha
+        run: echo ${{ github.sha }}
