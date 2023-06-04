@@ -27,5 +27,5 @@ jobs:
       - name: my run id
         run: echo ${{ github.event.workflow_run.id }}
 
-      - run: echo {{ github.event.pull_request.head.sha }}
-      - run: echo {{ github.event.pull_request.head.run_number }}
+      - run: echo ${{ github.event.pull_request.head.sha }}
+      - run: echo ${{ github.event.pull_request.head.run_number }}
