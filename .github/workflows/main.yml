@@ -31,7 +31,7 @@ jobs:
           path: ./downloaded.txt # Replace with the path where you want to save the artifact
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ARTIFACT_BRANCH: beta # Replace with the branch that the pull request was merged into
+          ARTIFACT_BRANCH: main # Replace with the branch that the pull request was merged into
           ARTIFACT_PULL_REQUEST: ${{ github.event.pull_request.number }}
           
           
